@@ -1,3 +1,26 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://blog.vsft.top/"
+languageCode = "zh-cn"
+title = "AI 布 知 道/AI Preach Not"
+theme = "PaperMod"
+
+[params]
+  ShowThemeToggle = true  # 启用明暗主题切换
+  ShowPostDate = true     # 显示文章日期
+  DateFormat = "2006年1月2日"  # 中文日期格式
+  ShowCodeCopyButtons = true  # 代码块复制按钮，适合技术文章
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 10
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 20
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 30
