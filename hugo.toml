@@ -1,7 +1,9 @@
-baseURL = "https://blog.vsft.top/"
+baseURL = "http://blog.vftl.site/"
 languageCode = "zh-cn"
 title = "AI 布 知 道/AI Preach Not"
 theme = "PaperMod"
+relativeURLs = true
+canonifyURLs = false
 
 [params]
   ShowThemeToggle = true  # 启用明暗主题切换
@@ -9,6 +11,9 @@ theme = "PaperMod"
   DateFormat = "2006年1月2日"  # 中文日期格式
   ShowCodeCopyButtons = true  # 代码块复制按钮，适合技术文章
 
+[server]
+  bind = "0.0.0.0"
+  
 [[menu.main]]
   identifier = "home"
   name = "首页"
