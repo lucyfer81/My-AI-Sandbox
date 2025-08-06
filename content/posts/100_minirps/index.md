@@ -2,7 +2,6 @@
 title = '挑战一百个AI轻应用之，无聊的石头剪刀布'
 date = 2025-08-04
 draft = false
-lang = 'zh'
 +++
 
 

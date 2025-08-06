@@ -2,7 +2,6 @@
 title = 'AI Airport'
 date = 2025-07-01
 draft = false
-lang = 'zh'
 +++
 
 ## 嘿，AI让我觉得自己能干大事

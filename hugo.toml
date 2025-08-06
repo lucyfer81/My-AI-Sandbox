@@ -1,12 +1,13 @@
 baseURL = "https://my-ai-sandbox-90j.pages.dev/"
 title = "AI 布 知 道/AI Preach Not"
 theme = "stack"
-relativeURLs = true
-canonifyURLs = false
+relativeURLs = false
+canonifyURLs = true
 
-# 多语言配置（基于当前目录结构）
+# 多语言配置（使用标准目录结构）
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true
+enableMissingTranslationPlaceholders = false
 
 [languages]
   [languages.zh]
@@ -14,14 +15,14 @@ defaultContentLanguageInSubdir = true
     languageName = "中文"
     weight = 1
     title = "AI 布 知 道"
-    baseURL = "https://my-ai-sandbox-90j.pages.dev/"
+    contentDir = "content"
   
   [languages.en]
     languageCode = "en-us"
     languageName = "English"
     weight = 2
     title = "AI Preach Not"
-    baseURL = "https://my-ai-sandbox-90j.pages.dev/"
+    contentDir = "content/en"
 
 [params]
   mainSections = ["posts"]
