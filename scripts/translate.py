@@ -74,8 +74,10 @@ def apply_glossary(text):
     return text
 
 def process_markdown_file(chinese_file):
-    """处理单个markdown文件"""
+    """处理单个markdown文件 - 适配Hugo多语言结构"""
     try:
+        chinese_path = Path(chinese_file)
+        
         with open(chinese_file, 'r', encoding='utf-8') as f:
             content = f.read()
         
@@ -93,7 +95,6 @@ def process_markdown_file(chinese_file):
                         front_matter = toml.loads(front_matter_str)
                     except:
                         # 如果TOML解析失败，尝试YAML
-                        import yaml
                         front_matter = yaml.safe_load(front_matter_str)
                     
                     # 翻译标题和描述
@@ -109,23 +110,30 @@ def process_markdown_file(chinese_file):
                     if 'categories' in front_matter:
                         front_matter['categories'] = [translate_with_tencent(str(cat)) for cat in front_matter['categories']]
                     
+                    # 添加语言标识
+                    front_matter['lang'] = 'en'
+                    
                     # 翻译正文
                     translated_body = translate_with_tencent(body)
                     
                     # 生成新的front matter，保持为YAML格式
-                    import yaml
                     new_front_matter = yaml.dump(front_matter, allow_unicode=True, default_flow_style=False)
+                    
+                    # 生成英文文件路径 - 适配Hugo多语言结构
+                    # 从 content/posts/xxx/index.md -> content/en/posts/xxx/index.md
+                    relative_path = chinese_path.relative_to('content')
+                    english_file = Path('content/en') / relative_path
+                    
+                    # 确保目标目录存在
+                    english_file.parent.mkdir(parents=True, exist_ok=True)
+                    
+                    # 检查是否已存在英文版本
+                    if english_file.exists():
+                        print(f"英文版本已存在: {english_file}")
+                        return False
                     
                     # 组合新文件内容（使用标准---分隔符）
                     new_content = f"---\n{new_front_matter}---\n{translated_body}"
-                    
-                    # 生成英文文件路径
-                    english_file = chinese_file.replace('index.md', 'index_en.md')
-                    
-                    # 检查是否已存在英文版本
-                    if Path(english_file).exists():
-                        print(f"英文版本已存在: {english_file}")
-                        return False
                     
                     with open(english_file, 'w', encoding='utf-8') as f:
                         f.write(new_content)
@@ -143,41 +151,46 @@ def process_markdown_file(chinese_file):
         return False
 
 def batch_translate():
-    """批量翻译现有文章"""
+    """批量翻译现有文章 - CI/CD兼容版本"""
     print("开始批量翻译现有文章...")
     
     # 检查腾讯云API凭证
     if not TENCENT_SECRET_ID or not TENCENT_SECRET_KEY:
         print("错误: 未设置TENCENT_SECRET_ID和TENCENT_SECRET_KEY环境变量")
         print("获取方式: https://console.cloud.tencent.com/cam/capi")
-        return
+        return False
     
     posts_dir = Path('content/posts')
     
     if not posts_dir.exists():
         print("错误: content/posts目录不存在")
-        return
+        return False
     
     # 获取所有中文文章
     chinese_files = []
     for index_file in posts_dir.glob('**/index.md'):
-        english_file = index_file.parent / 'index_en.md'
+        # 对于Hugo多语言结构，检查对应的英文目录
+        relative_path = index_file.relative_to('content/posts')
+        english_file = Path('content/en/posts') / relative_path
         if not english_file.exists():
             chinese_files.append(str(index_file))
     
     if not chinese_files:
         print("没有找到需要翻译的中文文章")
-        return
+        return True
     
     print(f"找到 {len(chinese_files)} 篇需要翻译的文章")
     
-    # 询问确认
-    response = input("是否开始翻译？(y/N): ")
-    if response.lower() != 'y':
-        print("取消翻译")
-        return
+    # CI环境下自动执行，不询问
+    if os.getenv('CI') != 'true':
+        response = input("是否开始翻译？(y/N): ")
+        if response.lower() != 'y':
+            print("取消翻译")
+            return False
     
     translated_count = 0
+    failed_files = []
+    
     for chinese_file in chinese_files:
         print(f"\n处理: {chinese_file}")
         try:
@@ -186,10 +199,27 @@ def batch_translate():
                 print(f"✓ 已翻译: {chinese_file}")
             else:
                 print(f"✗ 跳过: {chinese_file}")
+                failed_files.append(chinese_file)
         except Exception as e:
             print(f"✗ 错误: {e}")
+            failed_files.append(f"{chinese_file} (错误: {e})")
+    
+    # 验证翻译结果
+    if translated_count > 0:
+        print("\n正在验证翻译结果...")
+        from validate_translation import validate_all_translations
+        validation_passed = validate_all_translations()
+        if not validation_passed:
+            print("⚠️  部分翻译验证失败")
+            return False
     
     print(f"\n批量翻译完成，共处理 {translated_count} 篇文章")
+    if failed_files:
+        print("失败文件:")
+        for file in failed_files:
+            print(f"  - {file}")
+    
+    return len(failed_files) == 0
 
 if __name__ == "__main__":
     batch_translate()

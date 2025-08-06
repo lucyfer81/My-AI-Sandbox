@@ -7,9 +7,8 @@ import os
 import sys
 from pathlib import Path
 
-# 设置环境变量
-os.environ['TENCENT_SECRET_ID'] = 'YOUR_SECRET_ID'
-os.environ['TENCENT_SECRET_KEY'] = 'YOUR_SECRET_KEY'
+# 环境变量应该从系统获取，不要硬编码
+# 确保在运行前设置: export TENCENT_SECRET_ID=your_key && export TENCENT_SECRET_KEY=your_secret
 
 # 将当前目录添加到路径
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))

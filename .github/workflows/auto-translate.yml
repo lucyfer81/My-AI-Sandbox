@@ -29,12 +29,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install PyYAML requests toml
+        pip install -r requirements.txt
         
     - name: Run translation script
       env:
         TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
         TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+        CI: true
       run: python scripts/translate.py
       
     - name: Check for changes
@@ -51,6 +52,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add content/posts/**/index_en.md
+        git add content/en/posts/
         git commit -m "Auto-translate new Chinese articles to English" || exit 0
         git push
