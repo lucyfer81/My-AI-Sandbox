@@ -6,7 +6,7 @@ canonifyURLs = false
 
 # 多语言配置（基于当前目录结构）
 defaultContentLanguage = "zh"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.zh]
@@ -14,12 +14,14 @@ defaultContentLanguageInSubdir = false
     languageName = "中文"
     weight = 1
     title = "AI 布 知 道"
+    baseURL = "https://my-ai-sandbox-90j.pages.dev/"
   
   [languages.en]
     languageCode = "en-us"
     languageName = "English"
     weight = 2
     title = "AI Preach Not"
+    baseURL = "https://my-ai-sandbox-90j.pages.dev/"
 
 [params]
   mainSections = ["posts"]
@@ -33,19 +35,36 @@ defaultContentLanguageInSubdir = false
 [server]
   bind = "0.0.0.0"
 
-# 菜单配置
-[[menu.main]]
+# 菜单配置 - 中文
+[[languages.zh.menu.main]]
   identifier = "home"
   name = "首页"
   url = "/"
   weight = 10
-[[menu.main]]
+[[languages.zh.menu.main]]
   identifier = "posts"
   name = "文章"
   url = "/posts/"
   weight = 20
-[[menu.main]]
+[[languages.zh.menu.main]]
   identifier = "about"
   name = "关于"
   url = "/about/"
+  weight = 30
+
+# 菜单配置 - 英文
+[[languages.en.menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/en/"
+  weight = 10
+[[languages.en.menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/en/posts/"
+  weight = 20
+[[languages.en.menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/en/about/"
   weight = 30
