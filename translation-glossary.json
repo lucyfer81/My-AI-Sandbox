@@ -1,0 +1,27 @@
+{
+  "术语表": {
+    "AI": "AI",
+    "人工智能": "Artificial Intelligence",
+    "机器学习": "Machine Learning",
+    "深度学习": "Deep Learning",
+    "神经网络": "Neural Network",
+    "数据集": "Dataset",
+    "模型": "Model",
+    "算法": "Algorithm",
+    "布知道": "Preach Not",
+    "博客": "Blog",
+    "文章": "Article",
+    "技术": "Technology",
+    "代码": "Code",
+    "程序": "Program",
+    "开发": "Development",
+    "部署": "Deployment",
+    "云": "Cloud",
+    "服务器": "Server",
+    "API": "API",
+    "接口": "Interface",
+    "函数": "Function",
+    "变量": "Variable",
+    "参数": "Parameter"
+  }
+}

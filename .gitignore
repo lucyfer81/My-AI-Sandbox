@@ -3,3 +3,8 @@ public/
 hugo_extended_0.148.2_linux-amd64.deb
 resources/
 assets/
+claude.md
+.venv/
+__pycache__/
+*.pyc
+.env
