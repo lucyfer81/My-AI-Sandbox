@@ -1,0 +1,26 @@
+{{/* Busuanzi Counter Display */}}
+{{ if .Page.RelPermalink }}
+<div class="article-counter">
+    <span id="busuanzi_container_page_pv" style="display: inline;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="vertical-align: middle;">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <span id="busuanzi_value_page_pv">--</span> 次阅读
+    </span>
+</div>
+<style>
+.article-counter {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--card-text-color-tertiary);
+    border-top: 1px solid var(--card-border-color);
+}
+
+.article-counter svg {
+    margin-right: 5px;
+}
+</style>
+{{ end }}
