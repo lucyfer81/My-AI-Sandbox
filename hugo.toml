@@ -73,7 +73,7 @@ enableMissingTranslationPlaceholders = false
 [[languages.zh.menu.main]]
   identifier = "about"
   name = "关于"
-  pageRef = "/about.md"
+  pageRef = "/about"
   weight = 30
 
 # 菜单配置 - 英文
