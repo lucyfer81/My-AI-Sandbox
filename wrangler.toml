@@ -1,0 +1,12 @@
+name = "my-blog"
+main = ""
+compatibility_date = "2024-09-23"
+
+[build]
+command = "hugo --gc --minify"
+
+[build.upload]
+directory = "public"
+
+[[build.env]]
+HUGO_VERSION = "0.148.2"
