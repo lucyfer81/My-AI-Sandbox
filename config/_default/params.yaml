@@ -1,0 +1,6 @@
+comments:
+  enabled: true
+  provider: twikoo
+  twikoo:
+    envId: https://twikoo.lucyfer81.workers.dev
+    lang: zh-CN
