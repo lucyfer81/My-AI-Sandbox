@@ -3,8 +3,8 @@ from tencentcloud.tmt.v20180321 import tmt_client, models
 
 def verify_tencent_translation():
     # 替换为您的密钥（从申请邮件/CAM下载的CSV获取）
-    SECRET_ID = "YOUR_SECRET_ID"  # ← 替换这里
-    SECRET_KEY = "YOUR_SECRET_KEY"    # ← 替换这里
+    SECRET_ID = "REPLACE_WITH_YOUR_TENCENT_SECRET_ID"  # 占位符 - 请替换为实际密钥
+    SECRET_KEY = "REPLACE_WITH_YOUR_TENCENT_SECRET_KEY"    # 占位符 - 请替换为实际密钥
 
     try:
         # 1. 创建客户端（必须指定广州地域！）

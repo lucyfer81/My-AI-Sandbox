@@ -16,8 +16,8 @@ from tencentcloud.common import credential
 from tencentcloud.tmt.v20180321 import tmt_client, models
 
 # 腾讯云API配置
-TENCENT_SECRET_ID = os.getenv('TENCENT_SECRET_ID', 'YOUR_SECRET_ID')
-TENCENT_SECRET_KEY = os.getenv('TENCENT_SECRET_KEY', 'YOUR_SECRET_KEY')
+TENCENT_SECRET_ID = os.getenv('TENCENT_SECRET_ID', 'REPLACE_WITH_YOUR_TENCENT_SECRET_ID')
+TENCENT_SECRET_KEY = os.getenv('TENCENT_SECRET_KEY', 'REPLACE_WITH_YOUR_TENCENT_SECRET_KEY')
 TENCENT_REGION = "ap-guangzhou"  # 必须使用广州地域
 
 # 加载术语表
