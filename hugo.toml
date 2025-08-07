@@ -1,8 +1,8 @@
-baseURL = "https://my-ai-sandbox-90j.pages.dev/"
+baseURL = "https://blog.vftl.site/"
 title = "AI 布 知 道/AI Preach Not"
 theme = "stack"
-relativeURLs = false
-canonifyURLs = true
+relativeURLs = true
+canonifyURLs = false
 
 # 多语言配置（使用标准目录结构）
 defaultContentLanguage = "zh"
