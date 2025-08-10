@@ -4,3 +4,8 @@ comments:
   twikoo:
     envId: https://twikoo.lucyfer81.workers.dev
     lang: zh-CN
+
+avatar:
+    enabled: true
+    local: true
+    src: img/avatar.png
