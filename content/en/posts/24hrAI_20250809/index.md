@@ -1,6 +1,6 @@
 ---
 date: 2025-08-09 09:26:52+08:00
-draft: false
+draft: true
 lang: en
 title: AI Technology 24-hour News
 ---
