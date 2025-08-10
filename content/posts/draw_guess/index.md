@@ -1,5 +1,5 @@
 +++
-title = 'Draw_guess'
+title = '挑战一百个AI轻应用之，你画，它猜'
 date = 2025-08-10T11:00:28+08:00
 draft = false
 +++
