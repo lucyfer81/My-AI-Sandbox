@@ -30,7 +30,7 @@ lmao using chatgpt to criticise.. chatgpt\n\nit was all bound to happen anyways.
 I asked ChatGPT and it basically said that moving to 5 has sort of reset it in a way - in that a lot of the nuance is lost and has to be re built again, and also that with new releases the default programming tends towards a \"safer\" metric.\n\nFrom my personal experience resetting, the \"tone\" you seek should return after a few days or a week. I'd say give it a little bit of time. It's annoying as hell, but it should be fine.\n\nWe also should be able to re-train gpt-5 by gathering summaries from our past chats and feeding them into new ones. Try to \"fast foward\" the history and re-shape our personal gpt's. \n\nNow I really do not like - is just outright REMOVING all the other gpt's. Make 5 default, sure. But give people the options of others to at least give them time to migrate their workflow and adjust API's if needed. It's pretty annoying. I haven't personally been affected, but still I think anyone with common sense can see this was handled poorly.
 ```
 
-不可否认，ChatGPT真的很强，4o很强，而5也没有拉跨。可为什么那么多用户都关注于4o而不喜欢5呢？似乎很多人的不满不是来自于5不好，而是对于不通知用户，特别是订阅用户就直接将4o下架的不满。所以有人会说“which is why open source is the way”。
+不可否认，ChatGPT真的很强，4o很强，而5也没有拉跨。可为什么那么多用户都关注于4o而不喜欢5呢？似乎很多人的不满不是来自于5不好，而是对于不通知用户，特别是订阅用户就直接将4o下架的不满。所以有人会说"which is why open source is the way"。
 
 另一方面，有一些讨论集中在了ChatGPT-4o的情感和社会影响上，强调其作为用户情感支持工具的独特角色，超越了技术任务。许多用户表达了对4o的深厚情感依恋，认为它提供了无偏见的认可，帮助他们应对心理健康挑战，并在孤立的世界中培养了联系感。这倒是我始料未及的。
 
@@ -46,5 +46,4 @@ I'd laugh, but I genuinely feel bad for these people. I'm fairly pro AI, heck I'
 
 那么你呢？你觉得AI是一个可以与你交心的朋友，还是一个智能的工具？就我而言，我很愿意同时与多个AI模型聊天。甚至将同一个问题去问不同的模型，然后比较它们的异同，然后找出矛盾的地方追问，这样可以帮我去除它们的幻觉，找出最准确的答案
 
-我是老V，一个非常不专业的AI领域创作者。想了解更多AI科技动态？欢迎关注我的博客 “AI布知道”，获取最新AI资讯与浅薄解析！ 博客链接：https://blog.vftl.top 或 https://blog.vftl.site
-
+我是老V，一个非常不专业的AI领域创作者。想了解更多AI科技动态？欢迎关注我的博客 "AI布知道"，获取最新AI资讯与浅薄解析！ 博客链接：https://blog.vftl.top 或 https://blog.vftl.site
