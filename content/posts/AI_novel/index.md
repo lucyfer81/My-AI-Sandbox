@@ -157,11 +157,11 @@ Chatgpt在输出完第五章后，第六章开始输出我上一个话题的内�
 
 以下是各大模型根据统一框架创作的短篇小说，欢迎大家阅读并评论：
 
-- [ChatGPT创作的小说](../Article_Chatgpt)
-- [Claude创作的小说](../Article_Claude)
-- [DeepSeek创作的小说](../Article_DS)
-- [Gemini创作的小说](../Article_Gemini)
-- [GLM创作的小说](../Article_GLM)
-- [Grok创作的小说](../Article_Grok)
-- [Kimi创作的小说](../Article_Kimi)
-- [Qwen创作的小说](../Article_QWEN)
+- [ChatGPT创作的小说]({{< ref "posts/Article_Chatgpt" >}})
+- [Claude创作的小说]({{< ref "posts/Article_Claude" >}})
+- [DeepSeek创作的小说]({{< ref "posts/Article_DS" >}})
+- [Gemini创作的小说]({{< ref "posts/Article_Gemini" >}})
+- [GLM创作的小说]({{< ref "posts/Article_GLM" >}})
+- [Grok创作的小说]({{< ref "posts/Article_Grok" >}})
+- [Kimi创作的小说]({{< ref "posts/Article_Kimi" >}})
+- [Qwen创作的小说]({{< ref "posts/Article_QWEN" >}})
