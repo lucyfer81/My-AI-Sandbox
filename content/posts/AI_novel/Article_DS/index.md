@@ -1,5 +1,6 @@
 +++
-hidden = true
+title = "DeepSeek创作的小说"
+date = 2025-08-18T10:00:11+08:00
 +++
 
 ## 第一章 旧宅门
