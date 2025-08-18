@@ -1,7 +1,7 @@
 
 
 +++
-_build = {list = false}
+hidden = true
 +++
 
 ## 宅门轮回

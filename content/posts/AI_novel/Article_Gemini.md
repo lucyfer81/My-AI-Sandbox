@@ -1,5 +1,5 @@
 +++
-_build = {list = false}
+hidden = true
 +++
 
 小镇姑娘站在大宅门前，望着这个陌生但又熟悉的大门。

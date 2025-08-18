@@ -1,5 +1,5 @@
 +++
-_build = {list = false}
+hidden = true
 +++
 
 ## 第一章 旧宅门
